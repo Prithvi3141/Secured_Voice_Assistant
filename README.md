@@ -7,8 +7,8 @@ This application makes use of 2 Raspberry Pis and hosts a dynamic web applicatio
 1)Access Pi - This pi is used to obtain access to the application by Facial Recognition by making use of MCS Face API  
 2)Control Pi - The user gains control of this pi once the user finishes authentication through the access pi. Then he can makes use of the Voice UI developed using Google Voice API to navigate through the website and book tickets for his favorite movies.  
 3)Book My Show Web Application has been hosted on a LAMP server in an Amazon EC2 Instance. The dynamic web application Book My Show 
-employs a secure and resilient multi-tier architecture which is reliant to attacks such as SQL Injection Attacks, Brute Force Password 
-Attacks, Session Hijacking, Cross Site Request Forgery
+employs a secure and resilient multi-tier architecture which is resilient to attacks such as SQL Injection Attacks, Brute Force Password 
+Attacks, Session Hijacking, Cross Site Request Forgery etc.
   
 Our project makes use of 3 protocols.
   
