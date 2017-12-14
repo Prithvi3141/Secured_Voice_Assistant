@@ -1,12 +1,17 @@
 # Secured_Voice_Assistant
-Secure Voice Assistant is a secure voice assisted movie tickets booking application.   
-This application makes use of 2 Raspberry Pis and hosts a dynamic web application:  
+Secure Voice Assistant is a secure voice assisted movie tickets booking application. 
+  
+  
+This application makes use of 2 Raspberry Pis and hosts a dynamic web application: 
+  
 1)Access Pi - This pi is used to obtain access to the application by making use of MCS Face API  
 2)Control Pi - The user gains control of this pi once the user gains access through the access pi and then he can makes use of the  
 Voice UI developed using Google Voice API to navigate through the website and book tickets for his favorite movies.
 3)Book My Show Web Application has been hosted on a LAMP server in an Amazon EC2 Instance.
-
-Our project makes use of 3 protocols.  
+  
+  
+Our project makes use of 3 protocols.
+  
 1)MQTT-This protocol is used by the Control Pi to communicate with AWS IoT and the messages of the topic 'projectTopic' is forwarded by  
 the rules engine to AWS Lambda which does some event handling such as sending a notification if user has logged in or booked tickets     
 for a show.  
@@ -14,6 +19,7 @@ for a show.
 subscribed to the thsi topic receives messages to login or logout of this application.  
 3)HTTP - This protocol is used for Face API provided by Microsoft Cognitive Services. To make use of the cloud based service provided    
 by Face API requests are sent using HTTP protocol. Python Requests module has been used to send http requests. 
+  
   
 Voice Commands Supported-  
 1)Go Home - This command takes the user to to the homepage of this application.  
