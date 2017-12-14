@@ -13,7 +13,7 @@ import thread
 
 state = None
 
-print sys.path
+print (sys.path)
 
 url_base = 'http://ec2-184-72-98-174.compute-1.amazonaws.com/'
 
@@ -22,8 +22,8 @@ request_parameters = {
 }
 
 rootca = r'/home/pi/Desktop/project/control-pi/certificates/root-CA.crt'
-certificate = r'/home/pi/Desktop/project/control-pi/certificates/7812df2ed4-certificate.pem.crt'
-key = r'/home/pi/Desktop/project/control-pi/certificates/7812df2ed4-private.pem.key'
+certificate = r'/home/pi/Desktop/project/control-pi/certificates/fcab4265ca-certificate.pem.crt'
+key = r'/home/pi/Desktop/project/control-pi/certificates/fcab4265ca-private.pem.key'
 
 while_variable = 1
 
@@ -59,12 +59,13 @@ def on_message_mqtt(c, userdata, msg):
         login['postPass']=data_list[0],
     
         print(login)
-
+        
         thread.start_new_thread( begin, (c, login, ) )
 
     elif parsed_m['type'] == 'logout':
         global while_variable
         while_variable = 0
+        publish_message_mqtt( "Logged out Successfully", "logout", c)
         
 
 def publish_message_mqtt( message, log_type, c):
@@ -110,9 +111,9 @@ def begin(c, login):
                         stringName = theatreName[1] 
                         url = fetchRequestLinkFromStringName(r.content, stringName)
                         if url == "Link Not Found":
-                            print url
+                            print (url)
                         else:
-                            print url
+                            print (url)
                             r = session.request('GET', url_base + url, json=None, data=None, headers=None, params=None)
                             print r.content
                             print "India"
@@ -405,6 +406,7 @@ def begin(c, login):
     print('Logged out successfully')
 
 if __name__ == "__main__":
+    
     c =mqtt.Client()
     c.tls_set(rootca, certfile=certificate, keyfile = key, cert_reqs = ssl.CERT_REQUIRED,
           tls_version = ssl.PROTOCOL_TLSv1_2, ciphers = None)
