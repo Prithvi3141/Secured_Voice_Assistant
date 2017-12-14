@@ -5,8 +5,7 @@ Secure Voice Assistant is a secure voice assisted movie tickets booking applicat
 This application makes use of 2 Raspberry Pis and hosts a dynamic web application: 
   
 1)Access Pi - This pi is used to obtain access to the application by making use of MCS Face API  
-2)Control Pi - The user gains control of this pi once the user gains access through the access pi and then he can makes use of the  
-Voice UI developed using Google Voice API to navigate through the website and book tickets for his favorite movies.
+2)Control Pi - The user gains control of this pi once the user gains access through the access pi and then he can makes use of the Voice UI developed using Google Voice API to navigate through the website and book tickets for his favorite movies.  
 3)Book My Show Web Application has been hosted on a LAMP server in an Amazon EC2 Instance.
   
   
