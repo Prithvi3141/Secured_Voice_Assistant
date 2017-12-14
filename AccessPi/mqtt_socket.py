@@ -3,8 +3,7 @@ import logging
 import time
 import argparse
 import json
-"""export AWS_ACCESS_KEY_ID='AKIAIDGB6LVFOPJ6DEVQ'
-	export AWS_SECRET_ACCESS_KEY='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'"""
+
 
 
 def send_message(name, msg_type):
