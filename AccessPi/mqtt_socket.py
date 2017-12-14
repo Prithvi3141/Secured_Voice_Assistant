@@ -3,23 +3,14 @@ import logging
 import time
 import argparse
 import json
-"""export AWS_ACCESS_KEY_ID='AKIAJ2DORWLHXTVQINGA'
-	export AWS_SECRET_ACCESS_KEY='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'"""
-"""Access Key ID:
-AKIAJ2DORWLHXTVQINGA
-Secret Access Key:
-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"""
+"""export AWS_ACCESS_KEY_ID='AKIAIDGB6LVFOPJ6DEVQ'
+	export AWS_SECRET_ACCESS_KEY='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'"""
 
-"""export AWS_ACCESS_KEY_ID='AKIAJ6PDZ62QTTOPBSUA'
-	export AWS_SECRET_ACCESS_KEY='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'"""
-
-"""AKIAJ6PDZ62QTTOPBSUA
-    uLrSkuyjyZYgrkI/EWno6WwC1nZqrkub5iNuKjIE"""
 
 def send_message(name, msg_type):
     host = 'aa1kkd852hct2.iot.us-west-2.amazonaws.com'
     rootCAPath = '/home/pi/super-project/AccessPi/certificates/root-CA.crt'
-    clientId = 'AKIAIUBIWWZORPQHNCFQ'
+    clientId = 'AKIAIDGB6LVFOPJ6DEVQ'
     topic = 'accessTopic'
 
     myAWSIoTMQTTClient = AWSIoTMQTTClient(clientId, useWebsocket=True)

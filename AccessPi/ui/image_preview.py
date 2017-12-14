@@ -15,7 +15,7 @@ class Ui_Form(object):
         Form.setAutoFillBackground(False)
         Form.setStyleSheet("")
         self.capturePhoto = QtWidgets.QPushButton(Form)
-        self.capturePhoto.setGeometry(QtCore.QRect(350, 420, 141, 31))
+        self.capturePhoto.setGeometry(QtCore.QRect(320, 380, 141, 31))
         font = QtGui.QFont()
         font.setFamily("Liberation Serif")
         font.setPointSize(20)
